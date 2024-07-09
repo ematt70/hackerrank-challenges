@@ -6,10 +6,7 @@ RUN sudo apt-get update && apt-get upgrade -y && apt-get install -y xz-utils pyt
     && rm -rf /var/lib/apt/lists/* \
     && pip3 install --upgrade pip \
     && pip3 install -r /tmp/requirements.txt \
-    && sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" --unattended \
-    && chsh -s $(which zsh) \
+    && chsh -s $(which zsh)
 
-COPY ./.devcontainer/scripts/git_aliases.sh /etc/profile.d/git_aliases.sh \
-    && .zshrc /root/.zshrc
-
-CMD [ "zsh" ]
+COPY ./.devcontainer/scripts/git_aliases.sh /etc/profile.d/git_aliases.sh
+COPY ./.zshrc /home/vscode/.zshrc
