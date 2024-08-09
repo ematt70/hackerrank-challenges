@@ -18,7 +18,9 @@
             "extensions": [
                 "donjayamanne.python-extension-pack",
                 "ms-python.vscode-pylance",
-                "ms-python.debugpy"
+                "ms-python.debugpy",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
             ],
             "remoteUser": "vscode"
         }
